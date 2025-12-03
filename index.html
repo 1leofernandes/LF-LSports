@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LSports - Sistema inteligente de agendamento de quadras. Transforme sua gestão com tecnologia. Aumente faturamento em até 40%.">
+    <meta name="theme-color" content="#5a2ea6">
+    <title>LSports - Sistema de Agendamento de Quadras | Aumente seu Faturamento</title>
+    
+    <link rel="icon" href="cliente1/assets/lsports-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- EmailJS Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    
+    <!-- EmailJS Config -->
+    <script src="emailjs-config.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="cliente1/assets/lsports-icon.png" alt="LSports" class="logo-img">
+                <span>LSports</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Recursos</a>
+                <a href="#benefits" class="nav-link">Benefícios</a>
+                <a href="#pricing" class="nav-link">Planos</a>
+                <button class="nav-link cta-nav whatsapp-btn" style="background: none; border: none; cursor: pointer;">Comece Agora</button>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#features" class="mobile-link">Recursos</a>
+        <a href="#benefits" class="mobile-link">Benefícios</a>
+        <a href="#pricing" class="mobile-link">Planos</a>
+        <button class="mobile-link cta-mobile whatsapp-btn" style="background: none; border: none; cursor: pointer; width: 100%; text-align: left;">Comece Agora</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="badge">🚀 Solução #1 para Centros Esportivos</div>
+                <h1 class="hero-title">
+                    Transforme Seu <span class="gradient-text">Centro Esportivo</span> em uma Máquina de Faturamento
+                </h1>
+                <p class="hero-subtitle">
+                    Sistema inteligente que aumenta agendamentos em <strong>até 40%</strong>, reduz cancelamentos e automatiza toda gestão de quadras.
+                </p>
+                
+                <div class="hero-cta">
+                    <button class="btn btn-primary btn-lg whatsapp-btn">Teste Grátis por 7 Dias</button>
+                    <button class="btn btn-secondary btn-lg" id="demoBtn">Ver Demonstração</button>
+                </div>
+
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Sem cartão de crédito</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Suporte 24/7</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Migração gratuita</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <img src="cliente1/assets/image0.png" alt="App Screenshot" class="mockup-img">
+                    </div>
+                </div>
+                <div class="floating-card card-1">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>+150 agendamentos/mês</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-chart-line"></i>
+                    <span>+40% faturamento</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-users"></i>
+                    <span>+200 clientes ativos</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Conheça nossos recursos</span>
+            <div class="scroll-icon">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2 class="section-title">Recursos Poderosos</h2>
+            <p class="section-subtitle">Tudo que você precisa para gerenciar seu centro esportivo</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>App Inteligente</h3>
+                <p>Clientes agendam quadras 24/7 direto do celular. Interface intuitiva que aumenta conversões.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3>Dashboard Completo</h3>
+                <p>Controle total em tempo real: ocupação, faturamento, horários bloqueados e performance.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Gestão de Clientes</h3>
+                <p>Banco de dados centralizado, histórico de agendamentos, preferências e perfis personalizados.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Segurança Garantida</h3>
+                <p>Criptografia de ponta a ponta, backup automático e conformidade com LGPD.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <h3>Múltiplas Formas de Pagamento</h3>
+                <p>Cartão, PIX, dinheiro e assinaturas. Sistema de cobrança automática integrado.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3>Sincronização em Tempo Real</h3>
+                <p>Dados sincronizados em todos os dispositivos. Sem overbooking, sempre atualizado.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="section-header">
+            <h2 class="section-title">Por que escolher LSports?</h2>
+            <p class="section-subtitle">Resultados comprovados por centros esportivos em todo Brasil</p>
+        </div>
+
+        <div class="benefits-container">
+            <div class="benefit-row">
+                <div class="benefit-content">
+                    <h3>Aumente suas Receitas</h3>
+                    <p>Clientes agora podem reservar a qualquer hora. Preencha aqueles horários vazios que perdiam dinheiro. Média de aumento: <strong>40%</strong></p>
+                    <ul class="benefit-list">
+                        <li><i class="fas fa-check"></i> Reduz cancelamentos em 30%</li>
+                        <li><i class="fas fa-check"></i> Preenche horários noturnos</li>
+                        <li><i class="fas fa-check"></i> Cobra automaticamente</li>
+                    </ul>
+                </div>
+                <div class="benefit-image">
+                    <div class="stat-box">
+                        <div class="stat-number">+40%</div>
+                        <div class="stat-label">Faturamento</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="benefit-row reverse">
+                <div class="benefit-image">
+                    <div class="stat-box">
+                        <div class="stat-number">-80%</div>
+                        <div class="stat-label">Trabalho Manual</div>
+                    </div>
+                </div>
+                <div class="benefit-content">
+                    <h3>Economize Tempo e Recursos</h3>
+                    <p>Deixe o sistema gerenciar agendamentos, cobranças e relatórios. Seu time foca no que importa: atender bem.</p>
+                    <ul class="benefit-list">
+                        <li><i class="fas fa-check"></i> Automatiza 80% do trabalho administrativo</li>
+                        <li><i class="fas fa-check"></i> Elimina erros de agendamento</li>
+                        <li><i class="fas fa-check"></i> Gera relatórios automaticamente</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="benefit-row">
+                <div class="benefit-content">
+                    <h3>Melhor Experiência para Clientes</h3>
+                    <p>Seus clientes vão amar a facilidade. Interface moderna, agendamento em segundos, confirmações automáticas.</p>
+                    <ul class="benefit-list">
+                        <li><i class="fas fa-check"></i> Agendamento em 30 segundos</li>
+                        <li><i class="fas fa-check"></i> Confirmações por SMS/Email</li>
+                        <li><i class="fas fa-check"></i> Histórico de reservas na palma da mão</li>
+                    </ul>
+                </div>
+                <div class="benefit-image">
+                    <div class="stat-box">
+                        <div class="stat-number">4.9⭐</div>
+                        <div class="stat-label">Satisfação Clientes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="section-header">
+            <h2 class="section-title">Confiam em LSports</h2>
+            <p class="section-subtitle">Mais de 50 centros esportivos já transformaram seus negócios</p>
+        </div>
+
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Aumentamos nossas receitas em 35% nos primeiros 3 meses. O sistema é simples e funciona perfeitamente."</p>
+                <div class="testimonial-author">
+                    <strong>Carlos Silva</strong>
+                    <span>Gerente - Centro de Quadras Rio Sports</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Eliminamos 90% do trabalho manual. Agora meu time tem tempo para focar no atendimento ao cliente."</p>
+                <div class="testimonial-author">
+                    <strong>Juliana Costa</strong>
+                    <span>Proprietária - Quadras Premium SP</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Nossos clientes amam a facilidade de agendar. A taxa de ocupação passou de 60% para 95%."</p>
+                <div class="testimonial-author">
+                    <strong>Roberto Mendes</strong>
+                    <span>Diretor - Centro Esportivo Elite</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-container">
+            <div class="stat">
+                <div class="stat-count">50+</div>
+                <div class="stat-desc">Centros Esportivos</div>
+            </div>
+            <div class="stat">
+                <div class="stat-count">500K+</div>
+                <div class="stat-desc">Agendamentos/Mês</div>
+            </div>
+            <div class="stat">
+                <div class="stat-count">88%</div>
+                <div class="stat-desc">Taxa de Satisfação</div>
+            </div>
+            <div class="stat">
+                <div class="stat-count">24/7</div>
+                <div class="stat-desc">(horas) Suporte Disponível</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="section-header">
+            <h2 class="section-title">Planos Transparentes</h2>
+            <p class="section-subtitle">Sem surpresas. Cancele quando quiser.</p>
+        </div>
+
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Startup</h3>
+                <div class="price">R$ 29<span>/mês</span></div>
+                <p class="price-desc">Perfeito para quem está começando</p>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Até 2 quadras</li>
+                    <li><i class="fas fa-check"></i> 100 agendamentos/mês</li>
+                    <li><i class="fas fa-check"></i> Dashboard básico</li>
+                    <li><i class="fas fa-check"></i> Suporte por email</li>
+                </ul>
+                <button class="btn btn-outline whatsapp-btn">Escolher Plano</button>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="badge-featured">Mais Popular</div>
+                <h3>Professional</h3>
+                <div class="price">R$ 59<span>/mês</span></div>
+                <p class="price-desc">Para centros em crescimento</p>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Até 8 quadras</li>
+                    <li><i class="fas fa-check"></i> Agendamentos ilimitados</li>
+                    <li><i class="fas fa-check"></i> Dashboard completo</li>
+                    <li><i class="fas fa-check"></i> Painel de controle financeiro</li>
+                    <li><i class="fas fa-check"></i> Suporte completo</li>
+                </ul>
+                <button class="btn btn-primary whatsapp-btn">Comece Agora</button>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="price">Customizado</div>
+                <p class="price-desc">Para grandes operações</p>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Quadras ilimitadas</li>
+                    <li><i class="fas fa-check"></i> Multi-unidade</li>
+                    <li><i class="fas fa-check"></i> Inteligência Artificial integrada</li>
+                    <li><i class="fas fa-check"></i> Suporte dedicado</li>
+                    <li><i class="fas fa-check"></i> Onboarding personalizado</li>
+                </ul>
+                <button class="btn btn-outline whatsapp-btn">Falar com Vendas</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <h2>Pronto para Transformar sua Arena?</h2>
+        <p>Comece seu teste gratuito de 7 dias. Sem cartão de crédito necessário.</p>
+        
+        <div class="cta-form-container">
+            <form class="cta-form" id="leadForm">
+                <input type="text" placeholder="Seu nome" required class="form-input">
+                <input type="email" placeholder="Seu email" required class="form-input">
+                <input type="tel" placeholder="Seu telefone" required class="form-input">
+                <select class="form-input" required>
+                    <option value="">Quantidade de quadras</option>
+                    <option value="1-2">1 a 2 quadras</option>
+                    <option value="3-5">3 a 5 quadras</option>
+                    <option value="6+">6+ quadras</option>
+                </select>
+                <button type="submit" class="btn btn-primary btn-block">Começar Teste Grátis</button>
+            </form>
+        </div>
+
+        <p class="form-disclaimer">
+            ✓ Teste grátis por 7 dias | ✓ Sem cartão de crédito | ✓ Suporte imediato
+        </p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="section-header">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Como funciona o teste grátis?</span>
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Você terá acesso completo ao sistema por 7 dias. Sem limites, sem restrições. Após, pode continuar ou cancelar sem custo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Como migro meus dados?</span>
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Oferecemos migração gratuita de qualquer outro sistema. Nosso time faz tudo. Você não precisa fazer nada.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Qual é a segurança dos dados?</span>
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Usamos criptografia de banco (SSL 256-bit), backup automático diário, e somos totalmente conformes com LGPD.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Posso cancelar a qualquer momento?</span>
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Sim! Sem contratos, sem penalidades. Cancele quando quiser. Seus dados serão exportados gratuitamente.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Vocês oferecem suporte?</span>
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Oferecemos suporte 24/7 por email, WhatsApp e telefone. Tempo de resposta médio: 2 horas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>LSports</h4>
+                <p>Sistema inteligente de agendamento para centros esportivos.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Produto</h4>
+                <a href="#features">Recursos</a>
+                <a href="#pricing">Preços</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="footer-section">
+                <h4>Suporte</h4>
+                <a href="#">Central de Ajuda</a>
+                <a href="#">Contato</a>
+                <a href="#">Status</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
+                <a href="#">LGPD</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 LSports. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Demo -->
+    <div class="modal" id="demoModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h3>Veja LSports em Ação</h3>
+            <div class="demo-video">
+                <img src="cliente1/assets/lsports-icon.png" alt="Demo" style="width: 100%; border-radius: 8px;">
+            </div>
+            <p>Aguarde um momento enquanto carregamos a demonstração...</p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
