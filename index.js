@@ -133,19 +133,26 @@
                 }
 
                 try {
-                    // Enviar via EmailJS
-                    const response = await emailjs.send(
-                        EMAILJS_CONFIG.SERVICE_ID,
-                        EMAILJS_CONFIG.TEMPLATE_ID,
-                        {
-                            to_email: 'lfsoftware004@gmail.com',
-                            from_name: name,
-                            from_email: email,
-                            phone: phone,
-                            quadras: quadras,
-                            date: new Date().toLocaleString('pt-BR')
-                        }
-                    );
+                    // Enviar via FormSubmit (serviço gratuito, sem Tracking Prevention issues)
+                    const formData = new FormData();
+                    formData.append('name', name);
+                    formData.append('email', email);
+                    formData.append('phone', phone);
+                    formData.append('quadras', quadras);
+                    formData.append('date', new Date().toLocaleString('pt-BR'));
+                    formData.append('_captcha', 'false');
+                    formData.append('_next', window.location.href);
+
+                    const response = await fetch('https://formsubmit.co/ajax/lfsoftware004@gmail.com', {
+                        method: 'POST',
+                        body: formData,
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`Erro ao enviar: ${response.statusText}`);
+                    }
+
+                    const result = await response.json();
 
                     console.log('Lead enviado com sucesso:', { name, email, phone, quadras });
 
@@ -361,11 +368,8 @@
     // ============================================
 
     function init() {
-        // Inicializar EmailJS
-        if (typeof EMAILJS_CONFIG !== 'undefined') {
-            emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
-            console.log('✓ EmailJS inicializado');
-        }
+        // Formulário usa FormSubmit.co (não requer EmailJS)
+        console.log('✓ Sistema de formulários configurado (FormSubmit)');
 
         // Inject animation styles
         injectAnimationStyles();

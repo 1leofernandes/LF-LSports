@@ -16,6 +16,35 @@ const EMAILJS_CONFIG = {
     PUBLIC_KEY: 'gDKeENDsM2D2NzaJt'
 };
 
+// Aguardar EmailJS estar disponível (versão global)
+(function() {
+    let attempts = 0;
+    const maxAttempts = 50;
+    
+    const checkEmailJS = setInterval(() => {
+        attempts++;
+        
+        // Verificar se emailjs está disponível (versão global ou como módulo)
+        const emailjsLib = (typeof window !== 'undefined' && window.emailjs) || 
+                          (typeof emailjs !== 'undefined' && emailjs);
+        
+        if (emailjsLib && typeof emailjsLib.init === 'function') {
+            console.log('✓ EmailJS detectado!');
+            try {
+                emailjsLib.init(EMAILJS_CONFIG.PUBLIC_KEY);
+                console.log('✓ EmailJS inicializado com sucesso');
+                window.emailjsLib = emailjsLib; // Armazenar em window para fácil acesso
+            } catch (e) {
+                console.error('Erro ao inicializar EmailJS:', e);
+            }
+            clearInterval(checkEmailJS);
+        } else if (attempts > maxAttempts) {
+            console.warn('⚠ EmailJS não carregou após tentativas. FormularioSTEM funcionará via alternativa.');
+            clearInterval(checkEmailJS);
+        }
+    }, 100);
+})();
+
 // Exportar para uso no index.js
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = EMAILJS_CONFIG;
